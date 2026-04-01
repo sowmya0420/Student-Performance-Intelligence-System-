@@ -9,7 +9,7 @@ def show_phase4_counterfactuals(model, scaler, features):
     # --- FLOW CHECK ---
     # This ensures Phase 3 was completed first.
     if 'at_risk_status' not in st.session_state:
-        st.warning("⚠️ Please complete the **Phase 3 Risk Assessment** first to generate a student profile.")
+        st.warning("Please complete the **Phase 3 Risk Assessment** first to generate a student profile.")
         st.info("Navigate to Phase 3 in the sidebar, input student details, and click 'Analyze Risk'.")
         return
 
@@ -17,7 +17,7 @@ def show_phase4_counterfactuals(model, scaler, features):
     status = st.session_state['at_risk_status']
     data = st.session_state['risk_input_data']
     
-    st.subheader("🎯 Prescriptive Optimization Roadmap")
+    st.subheader("Prescriptive Optimization Roadmap")
     
     # =========================
     # Scenario 1: Student is AT RISK
@@ -49,7 +49,7 @@ def show_phase4_counterfactuals(model, scaler, features):
         if recommendations:
             for rec in recommendations:
                 # Using st.success or a clean markdown for actionable items
-                st.markdown(f"✅ **Action:** {rec}")
+                st.markdown(f" **Action:** {rec}")
         else:
             # If at risk but no simple factor triggers the rule, provide generic advice.
             st.info("Model Insight: Student is at risk due to a complex combination of factors. Focus on overall academic consistency.")
