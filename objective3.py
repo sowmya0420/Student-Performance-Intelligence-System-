@@ -25,7 +25,7 @@ def show_phase3_risk_detection(model, scaler, features):
     # =========================
     # Diagnostic Input
     # =========================
-    with st.expander("📝 Audit Student Metrics", expanded=True):
+    with st.expander("Audit Student Metrics", expanded=True):
         col1, col2 = st.columns(2)
         with col1:
             attendance = st.slider("Attendance (%)", 0, 100, init_vals[0])
@@ -56,10 +56,10 @@ def show_phase3_risk_detection(model, scaler, features):
 
         st.divider()
         if prediction == 1:
-            st.error(f"### ⚠️ Status: HIGH RISK ({round(prob*100, 2)}%)")
+            st.error(f"### Status: HIGH RISK ({round(prob*100, 2)}%)")
             st.info("The student profile matches historical failure patterns. **Proceed to Phase 4 for intervention.**")
         else:
-            st.success(f"### ✅ Status: LOW RISK ({round(prob*100, 2)}%)")
+            st.success(f"### Status: LOW RISK ({round(prob*100, 2)}%)")
 
         # Global Feature Importance (Scholarly Context)
         st.subheader("Global Model Logic (Ensemble Insights)")
