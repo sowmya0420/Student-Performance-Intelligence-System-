@@ -14,7 +14,7 @@ def show_phase1_stratification(model, scaler, features):
     # ==========================
     # Student Inputs (Organized in Columns for a "Scholarly" look)
     # ==========================
-    with st.expander("📝 Input Student Metrics", expanded=True):
+    with st.expander("Input Student Metrics", expanded=True):
         col1, col2 = st.columns(2)
         with col1:
             attendance = st.slider("Attendance (%)", 0, 100, 75, help="Historical attendance record.")
@@ -54,11 +54,11 @@ def show_phase1_stratification(model, scaler, features):
         st.subheader("Diagnostic Results")
         
         if prediction == 1:
-            st.error("⚠️ The student is likely to perform **Poorly (At Risk)**.")
+            st.error("The student is likely to perform **Poorly (At Risk)**.")
             st.error("### Status: **At-Risk Tier**")
             st.warning("Immediate intervention recommended. Proceed to **Phase 2** for score forecasting.")
         else:
-            st.success("✅ The student is likely to perform **Well**.")
+            st.success("The student is likely to perform **Well**.")
             st.success("### Status: **Optimal Performance Tier**")
             st.info("Student is meeting baseline expectations.")
 
