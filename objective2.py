@@ -14,20 +14,20 @@ def show_phase2_prediction(model, scaler, columns, background):
 
     # --- FLOW LOGIC: Check if data exists from Phase 1 ---
     if 'current_student_data' in st.session_state:
-        st.info(f"💡 System synchronized with Phase 1 data. Status: **{st.session_state['current_classification']}**")
+        st.info(f"System synchronized with Phase 1 data. Status: **{st.session_state['current_classification']}**")
         saved_data = st.session_state['current_student_data']
     else:
-        st.warning("⚠️ No data found from Phase 1. Using default baseline values.")
+        st.warning("No data found from Phase 1. Using default baseline values.")
         saved_data = None
 
-    tab1, tab2 = st.tabs(["📊 Local Score Explanation", "🌍 Global Model Behavior"])
+    tab1, tab2 = st.tabs(["Local Score Explanation", "Global Model Behavior"])
     explainer = shap.LinearExplainer(model, background)
     
     with tab1:
         # =============================
         # Dynamic Inputs (Pre-filled from Phase 1)
         # =============================
-        with st.expander("🔍 Refine Academic & Background Factors", expanded=True):
+        with st.expander("Refine Academic & Background Factors", expanded=True):
             c1, c2, c3 = st.columns(3)
             with c1:
                 st.markdown("**Academic Performance**")
@@ -121,7 +121,7 @@ def show_phase2_prediction(model, scaler, columns, background):
             st.session_state['forecasted_score'] = prediction
             st.session_state['regression_input'] = input_df
             
-            st.success("✅ Forecast complete. Proceed to **Phase 3** for Risk Mitigation & Guidance.")
+            st.success("Forecast complete. Proceed to **Phase 3** for Risk Mitigation & Guidance.")
 
     with tab2:
         st.write("This section visualizes how the model weights these factors across the entire student population.")
