@@ -85,4 +85,4 @@ joblib.dump(model, "clf_model.pkl")
 joblib.dump(scaler, "clf_scaler.pkl")
 joblib.dump(features, "clf_features.pkl")
 
-print("\n✅ Model training completed successfully.")
+print("\nModel training completed successfully.")
