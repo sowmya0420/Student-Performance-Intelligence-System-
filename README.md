@@ -3,11 +3,16 @@ A multi-stage machine learning pipeline that predicts student performance, detec
 
 ## What it does
 Most student analytics tools work in isolation. SPIS connects five modules into a single pipeline:
-  i. Classification — groups students as good performer or at-risk using logistic regression
-  ii. Score Prediction — predicts exact exam scores using linear regression with SHAP explanations
-  iii. Risk Detection — flags at-risk students using a random forest classifier
-  iv. Counterfactual Guidance — tells at-risk students what to change (attendance, study hours, sleep) and by how much
-  v. Resilience Analysis — identifies how low-resource students succeed despite socioeconomic disadvantage using a stacking ensemble
+
+  i. Classification - groups students as good performer or at-risk using logistic regression
+  
+  ii. Score Prediction - predicts exact exam scores using linear regression with SHAP explanations
+  
+  iii. Risk Detection - flags at-risk students using a random forest classifier
+  
+  iv. Counterfactual Guidance - tells at-risk students what to change (attendance, study hours, sleep) and by how much
+  
+  v. Resilience Analysis - identifies how low-resource students succeed despite socioeconomic disadvantage using a stacking ensemble
 
 ## Dataset
 Student Performance Factors dataset by Ahmed et al. (~6,000 records) from Kaggle. Features include attendance, hours studied, tutoring sessions, parental involvement, family income, and motivation level.
