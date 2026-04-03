@@ -73,7 +73,7 @@ st.sidebar.markdown("---")
 
 # The Logical Flow requested by the reviewer
 menu_options = [
-    "🏠 System Dashboard",
+    "System Dashboard",
     "Phase 1: Performance Stratification",
     "Phase 2: Predictive Forecasting",
     "Phase 3: Risk Detection",
@@ -92,7 +92,7 @@ st.sidebar.write("Explainable AI (XAI) Integrated")
 # -----------------------------
 
 # --- HOME DASHBOARD ---
-if page == "🏠 System Dashboard":
+if page == "System Dashboard":
     st.title("Student Performance Intelligence System")
     st.subheader("An Integrated Machine Learning & Explainable AI Framework")
     
@@ -107,7 +107,7 @@ if page == "🏠 System Dashboard":
     5. **Empirical Validation:** Analyzes the dataset for "Resilient" students to validate model insights.
     """)
     
-    st.info("💡 **Getting Started:** Select **Phase 1** from the sidebar to begin a student evaluation.")
+    st.info(" **Getting Started:** Select **Phase 1** from the sidebar to begin a student evaluation.")
 
 # --- PHASE 1: LOGISTIC REGRESSION ---
 elif page == "Phase 1: Performance Stratification":
